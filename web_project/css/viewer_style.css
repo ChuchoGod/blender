@@ -1,0 +1,66 @@
+body { margin: 0; overflow: hidden; background-color: #050505; font-family: 'Orbitron', sans-serif; }
+
+#info {
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 15px 25px;
+    background: rgba(0, 0, 0, 0.7);
+    border: 1px solid rgba(0, 255, 255, 0.3);
+    border-radius: 15px;
+    color: #0ff;
+    text-align: center;
+    pointer-events: none;
+    z-index: 10;
+    text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+    font-size: 14px;
+    letter-spacing: 1px;
+}
+
+/* El contenedor del iframe que simula la pantalla del PC */
+#computer-screen {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 85%;
+    height: 85%;
+    background: #000;
+    border: 2px solid #333;
+    border-radius: 10px;
+    box-shadow: 0 0 100px rgba(0, 150, 255, 0.2), 0 0 20px rgba(0, 150, 255, 0.5);
+    display: none; /* Oculto por defecto */
+    z-index: 20;
+    flex-direction: column;
+    overflow: hidden;
+}
+
+#computer-screen iframe, #computer-screen video {
+    flex-grow: 1;
+    border: none;
+    background: black;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+
+#close-btn {
+    background: linear-gradient(90deg, #800, #c00);
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-family: 'Orbitron', sans-serif;
+    font-weight: bold;
+    text-align: right;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-bottom: 1px solid #400;
+}
+#close-btn:hover { 
+    background: linear-gradient(90deg, #a00, #f00);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.5);
+}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mi Setup Gamer 3D</title>
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/viewer_style.css">
+    <!-- Importar Three.js desde CDN -->
+    <script type="importmap">
+        {
+            "imports": {
+                "three": "https://unpkg.com/three@0.160.0/build/three.module.js",
+                "three/addons/": "https://unpkg.com/three@0.160.0/examples/jsm/"
+            }
+        }
+    </script>
+</head>
+<body>
+    <div id="info">Haz CLICK en el MONITOR para usar la PC<br>Usa el mouse para rotar | Usa <b>W, A, S, D</b> para mover a STEVE</div>
+
+    <!-- Interfaz de la "Pantalla" -->
+    <div id="computer-screen">
+        <button id="close-btn" onclick="closeComputer()">X CERRAR / APAGAR MONITOR</button>
+        <!-- VIDEO DEL MONITOR -->
+        <video src="monitor.mp4" id="browser-frame" autoplay loop muted controls></video>
+    </div>
+
+    <script type="module" src="js/viewer_3d.js"></script>
+</body>
+</html>
