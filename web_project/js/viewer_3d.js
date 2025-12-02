@@ -168,8 +168,8 @@ function animate() {
 
             if (steveLimbs.legL) steveLimbs.legL.rotation.x = swing;
             if (steveLimbs.legR) steveLimbs.legR.rotation.x = -swing;
-            if (steveLimbs.armL) steveLimbs.armL.rotation.x = -swing;
-            if (steveLimbs.armR) steveLimbs.armR.rotation.x = swing;
+            if (steveLimbs.armL) steveLimbs.armL.rotation.x = swing;
+            if (steveLimbs.armR) steveLimbs.armR.rotation.x = -swing;
         } else {
             if (steveLimbs.legL) steveLimbs.legL.rotation.x = 0;
             if (steveLimbs.legR) steveLimbs.legR.rotation.x = 0;
